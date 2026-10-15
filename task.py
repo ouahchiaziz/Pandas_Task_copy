@@ -12,6 +12,7 @@ PRODUCTS_DF = pd.DataFrame({
     "product_name": ["Laptop", "Mouse", "Keyboard", "Monitor", "Headphones"],
     "price": [899.99, 24.50, 49.90, 249.00, 79.99],
     "stock": [15, 120, 75, 30, 50]
+
 })
 
 # Dataset for Sub-task 2: Weather sensor data containing missing values (NaN)
@@ -54,6 +55,8 @@ STUDENTS_DF = pd.DataFrame({
 
 def filter_rows_above_threshold(df: pd.DataFrame, column: str, threshold: float) -> pd.DataFrame:
     """Sub-task 1: Filter rows where the specified column is strictly greater than threshold."""
+    selected_rows = df[df['price'] > 50]
+    print(selected_rows)
     pass
 
 def fill_missing_values(df: pd.DataFrame, fill_value: float) -> pd.DataFrame:
