@@ -61,6 +61,13 @@ def filter_rows_above_threshold(df: pd.DataFrame, column: str, threshold: float)
 
 def fill_missing_values(df: pd.DataFrame, fill_value: float) -> pd.DataFrame:
     """Sub-task 2: Replace all missing values (NaN/None) with fill_value."""
+
+    df = pd.DataFrame({
+    "city": ["Rome", "Milan", "Naples", "Turin", "Florence"],
+    "temperature": [22.5, None, 25.0, 18.0, None],
+    "humidity": [55.0, 68.0, None, 72.0, 60.0]
+})
+    print(df)
     pass
 
 def calculate_group_mean(df: pd.DataFrame, group_col: str, value_col: str) -> pd.Series:
